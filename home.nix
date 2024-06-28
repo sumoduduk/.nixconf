@@ -31,6 +31,7 @@ in {
      pkgs.zig
      pkgs.gcc
      pkgs.fzf
+     pkgs.gnumake
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -121,6 +122,9 @@ in {
 	defaultEditor = true;
 	withPython3 = true;
 	withNodeJs = true;
+  vimDiffAlias = true;
+  vimAlias = true;
+  viAlias = true;
    };
   };
 
