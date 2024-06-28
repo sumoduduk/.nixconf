@@ -79,7 +79,7 @@ in {
   #  /etc/profiles/per-user/calista/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
     SSH_ASKPASS = "";
   };
 
@@ -122,9 +122,9 @@ in {
 	defaultEditor = true;
 	withPython3 = true;
 	withNodeJs = true;
-  vimdiffAlias = true;
-  vimAlias = true;
-  viAlias = true;
+	vimdiffAlias = true;
+	vimAlias = true;
+	viAlias = true;
    };
   };
 
