@@ -5,6 +5,10 @@ let
 in {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
+
+  imports = [
+	./host-home
+  ];
   home.username = "calista";
   home.homeDirectory = homeDir;
 
