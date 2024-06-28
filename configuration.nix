@@ -1,14 +1,16 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, inputs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.grub.enable = true;
@@ -33,31 +35,30 @@
 
   # Configure keymap in X11
   services.xserver = {
-	enable = true;
+    enable = true;
     xkb.layout = "us";
     xkb.variant = "";
   };
 
-   services.displayManager = {
-	sddm = {
-	enable = true;
-	wayland.enable = true;
-	theme = "where_is_my_sddm_theme";
-	};
-     };
+  services.displayManager = {
+    sddm = {
+      enable = true;
+      wayland.enable = true;
+      theme = "where_is_my_sddm_theme";
+    };
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.calista = {
     isNormalUser = true;
     description = "calista";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
-	 git
-	 fd
-	 xclip
-	 firefox
-	 kitty
-	];
+      git
+      fd
+      firefox
+      kitty
+    ];
   };
 
   # Allow unfree packages
@@ -71,7 +72,7 @@
   ];
 
   # zsh shell
-  environment.shells = with pkgs; [ zsh ];
+  environment.shells = with pkgs; [zsh];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
@@ -82,11 +83,11 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-    programs.hyprland = {
-	enable = true;
-	package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-	xwayland.enable = true;
-    };
+  programs.hyprland = {
+    enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    xwayland.enable = true;
+  };
 
   # List services that you want to enable:
 
@@ -108,8 +109,8 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
   nix.settings = {
-	experimental-features = [ "nix-command" "flakes" ];
-	substituters = ["https://hyprland.cachix.org"];
-	trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    experimental-features = ["nix-command" "flakes"];
+    substituters = ["https://hyprland.cachix.org"];
+    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 }

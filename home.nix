@@ -35,6 +35,8 @@ in {
     pkgs.gnumake
     pkgs.unzip
     pkgs.alejandra
+    pkgs.wl-clipboard
+    pkgs.luajitPackages.luarocks
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -109,10 +111,10 @@ in {
       enable = true;
       settings = {
         font.size = 12;
-        font.normal = {
-          family = "FiraCodeNerdFont";
-          style = "Regular";
-        };
+        # font.normal = {
+        #   family = "FiraCodeNerdFont";
+        #   style = "Regular";
+        # };
         window = {
           opacity = 0.92;
           dynamic_padding = true;
