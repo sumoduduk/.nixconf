@@ -98,8 +98,11 @@ in {
 	selection.save_to_clipboard = true;
 	};
     };
-   yazy = {
+   yazi = {
        enable = true;
+    };
+   lazygit = {
+      enable = true;
     };
   };
 
