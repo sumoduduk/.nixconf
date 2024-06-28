@@ -32,6 +32,7 @@ in {
      pkgs.gcc
      pkgs.fzf
      pkgs.gnumake
+     pkgs.unzip
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -94,6 +95,7 @@ in {
 	 getgit = "vim ${homeDir}/projects/game";
 	 flakerebuild = "sudo nixos-rebuild switch --flake .";
 	 homerebuild = "home-manager switch --flake .";
+   vimconf = "cd ${homeDir}/.config/nvim";
 	};
 	oh-my-zsh = {
 		enable = true;	
