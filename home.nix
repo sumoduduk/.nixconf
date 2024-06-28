@@ -9,6 +9,7 @@ in {
   imports = [
 	./host-home
   ];
+
   home.username = "calista";
   home.homeDirectory = homeDir;
 
