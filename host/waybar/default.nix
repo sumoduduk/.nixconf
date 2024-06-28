@@ -4,10 +4,10 @@
 
     settings = {
   layer = "top";
-  modules-left = [ "custom/arch" "hyprland/workspaces" ];
+  modules-left = [ "customarch" "hyprland/workspaces" ];
   modules-center = [ "clock" ];
   modules-right = [ "backlight" "pulseaudio" "bluetooth" "network" "battery" ];
-  custom/arch = {
+  customarch = {
     format = "  ";
     tooltip = false;
     on-click = "sh $HOME/.config/rofi/bin/powermenu";
