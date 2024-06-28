@@ -1,0 +1,44 @@
+* {
+  font-family: "UbuntuMono Nerd Font", "NotoSansMono";
+
+  font-size: 24px;
+
+  border: none;
+  border-radius: 4px;
+}
+
+button label {
+  all: unset;
+}
+
+window#waybar {
+  background: #0a0a0a;
+  color: #ffffff;
+  border-radius: 0px;
+}
+
+/* ----------- MODULES ----------- */
+#backlight,
+#pulseaudio,
+#memory,
+#cpu,
+#network,
+#custom-vpn,
+#battery,
+#clock,
+#clock-date,
+#custom-notifs {
+  padding: 0 8px;
+  margin: 2px 2px;
+  background: #4e4e4e;
+  font-size: 20px;
+  color: #0a0a0a;
+  background: #ffffff;
+}
+
+#pulseaudio.muted,
+#custom-vpn.disconnected,
+#custom-notifs.off {
+  background: #fb4934;
+  color: #ffffff;
+}
