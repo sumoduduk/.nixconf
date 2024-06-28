@@ -25,7 +25,7 @@ in {
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    pkgs.hello
+    #    pkgs.hello
     pkgs.ripgrep
     pkgs.nodejs_22
     pkgs.python3
@@ -40,7 +40,7 @@ in {
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    (pkgs.nerdfonts.override {fonts = ["FiraCodeNerdFont"];})
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -109,6 +109,10 @@ in {
       enable = true;
       settings = {
         font.size = 12;
+        font.normal = {
+          family = "FiraCodeNerdFont";
+          style = "Regular";
+        };
         window = {
           opacity = 0.92;
           dynamic_padding = true;
