@@ -86,6 +86,10 @@ in {
 	 getgit = "vim ${homeDir}/projects/game";
 	 flakerebuild = "sudo nixos-rebuild switch --flake .";
 	 homerebuild = "home-manager switch --flake .";
+	 oh-my-zsh = {
+		enable = true;	
+		theme = "dpoggi";
+	  };
 	};
      };
     alacritty = {
