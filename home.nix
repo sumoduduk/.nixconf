@@ -26,6 +26,8 @@ in {
     # # "Hello, world!" when run.
      pkgs.hello
      pkgs.ripgrep
+     pkgs.nodejs_22
+     pkgs.python3
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -114,6 +116,8 @@ in {
    neovim = {
 	enable = true;
 	defaultEditor = true;
+	withPython3 = true;
+	withNodeJs = true;
    };
   };
 
