@@ -1,11 +1,12 @@
-{ config, pkgs, ... }:
-
-let 
- homeDir =  "/home/calista";
+{
+  config,
+  pkgs,
+  ...
+}: let
+  homeDir = "/home/calista";
 in {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-
 
   home.username = "calista";
   home.homeDirectory = homeDir;
@@ -24,16 +25,16 @@ in {
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-     pkgs.hello
-     pkgs.ripgrep
-     pkgs.nodejs_22
-     pkgs.python3
-     pkgs.zig
-     pkgs.gcc
-     pkgs.fzf
-     pkgs.gnumake
-     pkgs.unzip
-     pkgs.alejandra
+    pkgs.hello
+    pkgs.ripgrep
+    pkgs.nodejs_22
+    pkgs.python3
+    pkgs.zig
+    pkgs.gcc
+    pkgs.fzf
+    pkgs.gnumake
+    pkgs.unzip
+    pkgs.alejandra
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -85,50 +86,69 @@ in {
     SSH_ASKPASS = "";
   };
 
-   programs = {
-     zsh = {
-	enable = true;
-	shellAliases = {
-	 ll = "ls -l";
-	 cls = "clear";
-	 project = "cd ${homeDir}/File/projects";
-	 nixconf = "cd ${homeDir}/.nixconf";
-	 getgit = "vim ${homeDir}/projects/game";
-	 flakerebuild = "sudo nixos-rebuild switch --flake .";
-	 homerebuild = "home-manager switch --flake .";
-   vimconf = "cd ${homeDir}/.config/nvim";
-	};
-	oh-my-zsh = {
-		enable = true;	
-		theme = "dpoggi";
-	  };
-     };
+  programs = {
+    zsh = {
+      enable = true;
+      shellAliases = {
+        ll = "ls -l";
+        cls = "clear";
+        project = "cd ${homeDir}/File/projects";
+        nixconf = "cd ${homeDir}/.nixconf";
+        getgit = "vim ${homeDir}/projects/game";
+        flakerebuild = "sudo nixos-rebuild switch --flake .";
+        homerebuild = "home-manager switch --flake .";
+        vimconf = "cd ${homeDir}/.config/nvim";
+      };
+      oh-my-zsh = {
+        enable = true;
+        theme = "dpoggi";
+      };
+    };
+
     alacritty = {
-	enable = true;
-	settings = {
-	font.size = 12;
-	window = {
-	 opacity = 0.92;
-	 dynamic_padding = true;
-	 };
-	selection.save_to_clipboard = true;
-	};
+      enable = true;
+      settings = {
+        font.size = 12;
+        window = {
+          opacity = 0.92;
+          dynamic_padding = true;
+        };
+        selection.save_to_clipboard = true;
+        keyboard.bindings = [
+        {key = "v"; mods = "Control"; action = "Paste"}
+        {key = "t"; mods = "Control"; action = "CreateNewWindow"}
+        ];
+        colors = {
+
+selection = {text = "#11111B" ; background = "#F5E0DC"};
+cursor = {text = "#11111B" ; cursor = "#F5E0DC" };
+
+primary = {
+
+foreground ="#CDD6F4";
+background ="#212528";
+};
+        };
+      };
     };
-   yazi = {
-       enable = true;
-    };
-   lazygit = {
+
+    yazi = {
       enable = true;
     };
-   neovim = {
-	enable = true;
-	defaultEditor = true;
-	withPython3 = true;
-	withNodeJs = true;
-	vimdiffAlias = true;
-	vimAlias = true;
-	viAlias = true;
-   };
+
+    lazygit = {
+      enable = true;
+    };
+
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+      withPython3 = true;
+      withNodeJs = true;
+      vimdiffAlias = true;
+      vimAlias = true;
+      viAlias = true;
+    };
   };
 
   # Let Home Manager install and manage itself.
