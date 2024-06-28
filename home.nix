@@ -28,6 +28,8 @@ in {
      pkgs.ripgrep
      pkgs.nodejs_22
      pkgs.python3
+     pkgs.zig
+     pkgs.gcc
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
