@@ -4,5 +4,6 @@
     ./dunst.nix
     ./gtk.nix
     ./rofi.nix
+    ./wofi.nix
   ];
 }

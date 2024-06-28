@@ -172,6 +172,21 @@ in {
     };
   };
 
+  services = {
+    hyprpaper = {
+      enable = true;
+      settings = {
+        preload = [
+          "~/Pictures/neon-lights-dark.jpg"
+        ];
+        wallpaper = [
+          "~/Pictures/neon-lights-dark.jpg"
+        ];
+        splash = true;
+      };
+    };
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
