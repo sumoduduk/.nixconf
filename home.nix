@@ -122,7 +122,7 @@ in {
 	defaultEditor = true;
 	withPython3 = true;
 	withNodeJs = true;
-  vimDiffAlias = true;
+  vimdiffAlias = true;
   vimAlias = true;
   viAlias = true;
    };
