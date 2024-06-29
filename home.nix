@@ -178,10 +178,10 @@ in {
       enable = true;
       settings = {
         preload = [
-          "~/Pictures/neon-lights-dark.jpg"
+          "${homeDir}/Pictures/neon-lights-dark.jpg"
         ];
         wallpaper = [
-          "~/Pictures/neon-lights-dark.jpg"
+          "${homeDir}/Pictures/neon-lights-dark.jpg"
         ];
         splash = true;
       };
