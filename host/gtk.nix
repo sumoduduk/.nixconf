@@ -13,7 +13,7 @@ in {
   gtk = {
     enable = true;
 
-    font.name = "FiraCode Nerd Font 12";
+    font.name = "DejaVu Sans 12";
 
     theme = {
       name = "Matcha-dark-aliz";
