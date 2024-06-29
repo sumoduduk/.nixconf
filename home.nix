@@ -38,6 +38,7 @@ in {
     pkgs.fzf
     pkgs.gnumake
     pkgs.unzip
+    pkgs.btop
     pkgs.alejandra
     pkgs.wl-clipboard
     pkgs.luajitPackages.luarocks
