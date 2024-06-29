@@ -100,7 +100,7 @@ in {
         cls = "clear";
         project = "cd ${homeDir}/File/projects";
         nixconf = "cd ${homeDir}/.nixconf";
-        getgit = "vim ${homeDir}/projects/game";
+        getgit = "nvim ${homeDir}/File/projects/game";
         flakerebuild = "sudo nixos-rebuild switch --flake .";
         homerebuild = "home-manager switch --flake .";
         vimconf = "cd ${homeDir}/.config/nvim";
