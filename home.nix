@@ -122,8 +122,9 @@ in {
           style = "Regular";
         };
         window = {
-          opacity = 0.83;
+          opacity = 0.93;
           dynamic_padding = true;
+          blur = true;
         };
         selection.save_to_clipboard = true;
         keyboard.bindings = [
