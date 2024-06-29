@@ -49,6 +49,7 @@ in {
     pkgs.gnome-icon-theme
     pkgs.material-icons
     pkgs.font-awesome
+    pkgs.noto-fonts
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
