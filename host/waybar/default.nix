@@ -90,7 +90,7 @@
         };
 
         "custom/powermenu" = {
-          "format" = " ";
+          "format" = "";
           "tooltip" = false;
           "on-click" = "exec wlogout -p layer-shell";
         };
