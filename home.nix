@@ -37,6 +37,7 @@ in {
     pkgs.gcc
     pkgs.fzf
     pkgs.gnumake
+    pkgs.hyprpaper
     pkgs.unzip
     pkgs.btop
     pkgs.alejandra
