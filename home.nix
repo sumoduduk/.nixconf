@@ -115,10 +115,10 @@ in {
       enable = true;
       settings = {
         font.size = 12;
-        # font.normal = {
-        #   family = "FiraCodeNerdFont";
-        #   style = "Regular";
-        # };
+        font.normal = {
+          family = "FiraCodeNerdFont";
+          style = "Regular";
+        };
         window = {
           opacity = 0.92;
           dynamic_padding = true;
