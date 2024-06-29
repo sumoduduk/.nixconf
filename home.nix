@@ -40,9 +40,14 @@ in {
     pkgs.hyprpaper
     pkgs.unzip
     pkgs.btop
+    pkgs.bat
+    pkgs.termscp
     pkgs.alejandra
     pkgs.wl-clipboard
     pkgs.luajitPackages.luarocks
+    pkgs.papirus-icon-theme
+    pkgs.gnome-icon-theme
+    pkgs.material-icons
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
