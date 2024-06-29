@@ -61,8 +61,6 @@
             active = "";
             default = "";
           };
-          tooltip = false;
-          all-outputs = true;
         };
 
         network = {
@@ -74,7 +72,7 @@
 
         "temperature" = {
           "format" = "{icon} {temperatureC}°C";
-          "hwmon-path" = "/sys/class/hwmon/hwmon1/temp1_input";
+          "hwmon-path" = "/sys/class/hwmon/hwmon0/temp1_input";
           "critical-threshold" = 80;
           "format-icons" = ["" "" ""];
         };
