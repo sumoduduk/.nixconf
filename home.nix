@@ -122,7 +122,7 @@ in {
           style = "Regular";
         };
         window = {
-          opacity = 0.92;
+          opacity = 0.83;
           dynamic_padding = true;
         };
         selection.save_to_clipboard = true;
@@ -182,9 +182,9 @@ in {
           "${homeDir}/Pictures/neon-lights-dark.jpg"
         ];
         wallpaper = [
-          "${homeDir}/Pictures/neon-lights-dark.jpg"
+          ",${homeDir}/Pictures/neon-lights-dark.jpg"
         ];
-        splash = true;
+        splash = false;
       };
     };
   };
