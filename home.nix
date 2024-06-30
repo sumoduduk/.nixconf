@@ -127,7 +127,7 @@ in {
       settings = {
         font.size = 12;
         font.normal = {
-          family = "FiraCodeNerdFont";
+          family = "FiraCodeNerdFontPropo";
           style = "Regular";
         };
         window = {
