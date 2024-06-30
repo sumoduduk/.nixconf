@@ -10,6 +10,8 @@
       gcc
       rustc
       rustfmt
+      rust-analyzer
+      clippy
     ];
 
     sessionVariables.CARGO_HOME = "${config.xdg.dataHome}/cargo";
