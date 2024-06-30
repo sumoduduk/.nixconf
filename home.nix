@@ -108,8 +108,12 @@ in {
         ll = "ls -l";
         cls = "clear";
         project = "cd ${homeDir}/File/projects";
+        rustproject = "cd ${homeDir}/File/projects/rust_project";
+        pythproject = "cd ${homeDir}/File/projects/python_project";
+        webproject = "cd ${homeDir}/File/projects/js_project";
         nixconf = "cd ${homeDir}/.nixconf";
         getgit = "nvim ${homeDir}/File/projects/game";
+        flakeupdate = "nixconf && sudo nix flake update";
         flakerebuild = "sudo nixos-rebuild switch --flake .";
         homerebuild = "home-manager switch --flake .";
         vimconf = "cd ${homeDir}/.config/nvim";
