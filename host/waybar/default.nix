@@ -133,12 +133,12 @@
         min-height: 0;
         margin: 0;
         padding: 0;
+        font-family: "UbuntuMono Nerd Font", "NotoSansMono";
       }
       #waybar {
         background: #1e222a;
         color: #eeeeef;
         font-size: 14px;
-        font-family: "FiraCode Nerd Font";
       }
 
       #workspaces button {
