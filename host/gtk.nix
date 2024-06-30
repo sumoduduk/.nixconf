@@ -21,8 +21,8 @@ in {
     };
 
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      name = "Symbola";
+      package = pkgs.symbola;
     };
 
     cursorTheme = cursor;
