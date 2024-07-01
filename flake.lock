@@ -413,12 +413,29 @@
         "type": "indirect"
       }
     },
+    "nvim-config": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1719845596,
+        "narHash": "sha256-fBbkKGHGG6MAmliDOWZCIT15ywmAWl0eRRiDUgMXGAQ=",
+        "ref": "refs/heads/arch",
+        "rev": "2275f12006cefac677aa4930f0dce9f7b070d340",
+        "revCount": 35,
+        "type": "git",
+        "url": "file:./host/neovim/nvim"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:./host/neovim/nvim"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_3",
+        "nvim-config": "nvim-config"
       }
     },
     "systems": {
