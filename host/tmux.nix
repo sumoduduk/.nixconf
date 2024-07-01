@@ -50,9 +50,11 @@
       # remove delay for exiting insert mode with ESC in Neovim
       set -sg escape-time 10
 
-                  # auto window rename
-                  set -g automatic-rename
-                  set -g automatic-rename-format '#{pane_current_command}'
+      # auto window rename
+      set -g automatic-rename
+      set -g automatic-rename-format '#{pane_current_command}'
+
+        set -g status-style bg=default
     '';
   };
 }
