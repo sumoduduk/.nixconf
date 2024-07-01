@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager/master";
+    home-manager.url = "github:nix-community/home-manager/";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     nvim-config = {
@@ -41,12 +41,12 @@
             allowUnfree = true;
           };
         };
+	extraSpecialArgs = {inherit nvim-config;};
         modules = [
           ./home.nix
           {
             nixpkgs.overlays = overlays;
           }
-	(import nvim-config)
         ];
       };
     };
