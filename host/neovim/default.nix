@@ -69,7 +69,7 @@ in {
 
   home.file."./.config/nvim/lua/calista/core/init.lua" = {
     text =
-      (builtins.readFile "./nvim/lua/calista/core/init.lua")
+      (builtins.readFile ./nvim/lua/calista/core/init.lua)
       + ''
         vim.opt.runtimepath:append("${treesitter-parsers}")
       '';
