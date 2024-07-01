@@ -10,7 +10,6 @@
       gcc
       rustc
       rustfmt
-      rust-analyzer
       clippy
     ];
 

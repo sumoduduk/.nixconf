@@ -6,6 +6,9 @@
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    neovim-nightly-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+    };
   };
 
   outputs = {
@@ -14,6 +17,7 @@
     home-manager,
     ...
   } @ inputs: let
+    overlays = [inputs.neovim-nightly-overlay.overlays.default];
     lib = nixpkgs.lib;
     system = "x86_64-linux";
   in {
@@ -32,7 +36,12 @@
             allowUnfree = true;
           };
         };
-        modules = [./home.nix];
+        modules = [
+          ./home.nix
+          {
+            nixpkgs.overlays = overlays;
+          }
+        ];
       };
     };
   };

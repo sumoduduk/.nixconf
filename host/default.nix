@@ -1,6 +1,7 @@
 {
   imports = [
     ./waybar
+    ./neovim
     ./dunst.nix
     ./gtk.nix
     ./rofi.nix

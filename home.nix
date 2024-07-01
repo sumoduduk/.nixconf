@@ -115,7 +115,7 @@ in {
         getgit = "nvim ${homeDir}/File/projects/game";
         flakeupdate = "nixconf && sudo nix flake update";
         flakerebuild = "sudo nixos-rebuild switch --flake .";
-        homerebuild = "home-manager switch --flake .";
+        homerebuild = "home-manager switch --flake .  --show-trace";
         vimconf = "cd ${homeDir}/.config/nvim";
       };
       oh-my-zsh = {
