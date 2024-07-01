@@ -49,7 +49,6 @@ in {
     pkgs.noto-fonts
     pkgs.symbola
     pkgs.steam-run
-    pkgs.youtube-tui
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -111,6 +110,7 @@ in {
         rustproject = "cd ${homeDir}/File/projects/rust_project";
         pythproject = "cd ${homeDir}/File/projects/python_project";
         webproject = "cd ${homeDir}/File/projects/js_project";
+        vaultobsidian = "cd ${homeDir}/File/notes/obsidian_vault";
         nixconf = "cd ${homeDir}/.nixconf";
         getgit = "nvim ${homeDir}/File/projects/game";
         flakeupdate = "nixconf && sudo nix flake update";
