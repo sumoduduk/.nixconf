@@ -1,5 +1,4 @@
 {pkgs, ...}: let
-  nvimPath = "/home/calista/File/nvim";
   treesitterWithGrammars = pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [
     p.bash
     p.comment
@@ -64,13 +63,13 @@ in {
   };
 
   home.file."./.config/nvim/" = {
-    source = nvimPath;
+    source = ./nvim;
     recursive = true;
   };
 
   home.file."./.config/nvim/lua/calista/core/init.lua" = {
     text =
-      (builtins.readFile "${nvimPath}/lua/calista/core/init.lua")
+      (builtins.readFile "./nvim/lua/calista/core/init.lua")
       + ''
         vim.opt.runtimepath:append("${treesitter-parsers}")
       '';

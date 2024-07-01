@@ -1,0 +1,3 @@
+[submodule "host/neovim/nvim"]
+	path = host/neovim/nvim
+	url = https://github.com/sumoduduk/nvim.git
