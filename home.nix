@@ -47,8 +47,8 @@ in {
     pkgs.luajitPackages.luarocks
     pkgs.papirus-icon-theme
     pkgs.noto-fonts
-#    pkgs.symbola
-#    pkgs.steam-run
+    #    pkgs.symbola
+    #    pkgs.steam-run
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -98,91 +98,16 @@ in {
   home.sessionVariables = {
     EDITOR = "nvim";
     SSH_ASKPASS = "";
+    RUST_PROJECT = "${homeDir}/File/projects/rust_project";
+    VAULT_OBSIDIAN = "${homeDir}/File/notes/obsidian_vault";
   };
 
   programs = {
-    zsh = {
-      enable = true;
-      shellAliases = {
-        ll = "ls -l";
-        cls = "clear";
-        project = "cd ${homeDir}/File/projects";
-        rustproject = "cd ${homeDir}/File/projects/rust_project";
-        pythproject = "cd ${homeDir}/File/projects/python_project";
-        webproject = "cd ${homeDir}/File/projects/js_project";
-        vaultobsidian = "cd ${homeDir}/File/notes/obsidian_vault";
-        nixconf = "cd ${homeDir}/.nixconf";
-        getgit = "nvim ${homeDir}/File/projects/game";
-        flakeupdate = "nixconf && sudo nix flake update";
-        flakerebuild = "sudo nixos-rebuild switch --flake .";
-        homerebuild = "home-manager switch --flake .  --show-trace";
-        vimconf = "cd ${homeDir}/.config/nvim";
-      };
-      oh-my-zsh = {
-        enable = true;
-        theme = "dpoggi";
-      };
-    };
-
-    alacritty = {
-      enable = true;
-      settings = {
-        font.size = 12;
-        font.normal = {
-          family = "FiraCodeNerdFontPropo";
-          style = "Regular";
-        };
-        window = {
-          opacity = 0.93;
-          dynamic_padding = true;
-          blur = true;
-        };
-        selection.save_to_clipboard = true;
-        keyboard.bindings = [
-          {
-            key = "v";
-            mods = "Control";
-            action = "Paste";
-          }
-          {
-            key = "t";
-            mods = "Control";
-            action = "CreateNewWindow";
-          }
-        ];
-        colors = {
-          selection = {
-            text = "#11111B";
-            background = "#F5E0DC";
-          };
-          cursor = {
-            text = "#11111B";
-            cursor = "#F5E0DC";
-          };
-          primary = {
-            foreground = "#CDD6F4";
-            background = "#212528";
-          };
-        };
-      };
-    };
-
     yazi = {
       enable = true;
     };
-
     lazygit = {
       enable = true;
-    };
-
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-      withPython3 = true;
-      withNodeJs = true;
-      vimdiffAlias = true;
-      vimAlias = true;
-      viAlias = true;
     };
   };
 
