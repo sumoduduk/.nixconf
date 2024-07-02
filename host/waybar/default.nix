@@ -29,19 +29,15 @@
           format = "{}";
           rewrite = {
             "(\\d\\. )?(.*) - Chromium" = "<span color=\"#4285F4\"></span>  $2 ";
+            "(\\d\\. )?(.*) - Firefox" = "<span color=\"#4285F4\">🦊</span>  $2 ";
             "nvim (.*)" = "<span color=\"#57A143\"></span>  $1";
+            "vim (.*)" = "<span color=\"#57A143\"></span>  $1";
             "nvim" = "<span color=\"#57A143\">  Neovim</span> ";
             "ranger(.*)" = "<span color=\"#ffffff\"></span>  $1";
             "alacritty (.*)" = "<span color=\"#ffffff\"></span>  $1";
             "Search(.*)" = "<span color=\"#a855f7\"></span>  Search$1";
           };
           "separate-outputs" = false;
-        };
-
-        "hyprland/submap" = {
-          "format" = "✌️ {}";
-          "max-length" = 8;
-          "tooltip" = true;
         };
 
         "hyprland/workspaces" = {
@@ -88,7 +84,7 @@
         };
 
         "custom/powermenu" = {
-          "format" = "";
+          "format" = "❄️";
           "tooltip" = false;
           "on-click" = "exec wlogout -p layer-shell";
         };
