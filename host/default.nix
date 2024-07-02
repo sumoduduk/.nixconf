@@ -8,5 +8,7 @@
     ./wofi.nix
     ./tmux.nix
     ./rust.nix
+    ./alacritty.nix
+    ./zsh.nix
   ];
 }
