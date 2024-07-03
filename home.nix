@@ -26,27 +26,30 @@ in {
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     #    pkgs.hello
-    pkgs.ripgrep
-    pkgs.nodejs_22
-    pkgs.python3
-    pkgs.zig
-    pkgs.gcc
-    pkgs.fzf
-    pkgs.gnumake
-    pkgs.hyprpaper
-    pkgs.unzip
-    pkgs.btop
-    pkgs.bat
-    pkgs.termscp
-    pkgs.alejandra
-    pkgs.wl-clipboard
-    pkgs.luajitPackages.luarocks
-    pkgs.papirus-icon-theme
-    pkgs.noto-fonts
+    ripgrep
+    nodejs_22
+    python3
+    zig
+    gcc
+    fzf
+    gnumake
+    hyprpaper
+    unzip
+    btop
+    bat
+    termscp
+    alejandra
+    wl-clipboard
+    luajitPackages.luarocks
+    papirus-icon-theme
+    noto-fonts
+    atac
+    termscp
+
     #    pkgs.symbola
     #    pkgs.steam-run
 
