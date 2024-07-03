@@ -1,39 +1,8 @@
-{pkgs, nvim-config, ...}: let
-  treesitterWithGrammars = pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [
-    p.bash
-    p.comment
-    p.css
-    p.dockerfile
-    p.gitattributes
-    p.gitignore
-    p.go
-    p.gomod
-    p.gowork
-    p.javascript
-    p.jq
-    p.json5
-    p.json
-    p.lua
-    p.make
-    p.markdown
-    p.markdown_inline
-    p.nix
-    p.python
-    p.rust
-    p.toml
-    p.typescript
-    p.tsx
-    p.html
-    p.graphql
-    p.vim
-    p.yaml
-  ]);
-
-  treesitter-parsers = pkgs.symlinkJoin {
-    name = "treesitter-parsers";
-    paths = treesitterWithGrammars.dependencies;
-  };
-in {
+{
+  pkgs,
+  nvim-config,
+  ...
+}: {
   home.packages = with pkgs; [
     lua-language-server
     rust-analyzer-unwrapped
@@ -44,6 +13,7 @@ in {
     nodePackages.prettier
     pylint
     pyright
+    stylua
   ];
 
   programs.neovim = {
@@ -57,9 +27,9 @@ in {
     vimAlias = true;
     viAlias = true;
 
-    plugins = [
-      treesitterWithGrammars
-    ];
+    # plugins = [
+    #   treesitterWithGrammars
+    # ];
   };
 
   home.file."./.config/nvim/" = {
@@ -67,18 +37,52 @@ in {
     recursive = true;
   };
 
-  home.file."./.config/nvim/lua/calista/core/init.lua" = {
-    text =
-      (builtins.readFile "${nvim-config}/lua/calista/core/init.lua")
-      + ''
-        vim.opt.runtimepath:append("${treesitter-parsers}")
-      '';
-  };
+  # home.file."./.config/nvim/lua/calista/core/init.lua" = {
+  #   text =
+  #     (builtins.readFile "${nvim-config}/lua/calista/core/init.lua")
+  #     + ''
+  #       vim.opt.runtimepath:append("${treesitter-parsers}")
+  #     '';
+  # };
 
   # Treesitter is configured as a locally developed module in lazy.nvim
   # we hardcode a symlink here so that we can refer to it in our lazy config
-  home.file."./.local/share/nvim/lazy/nvim-treesitter/" = {
-    recursive = true;
-    source = treesitterWithGrammars;
-  };
+  # home.file."./.local/share/nvim/lazy/nvim-treesitter/" = {
+  #   recursive = true;
+  #   source = treesitterWithGrammars;
+  # };
 }
+# treesitterWithGrammars = pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [
+#   p.bash
+#   p.comment
+#   p.css
+#   p.dockerfile
+#   p.gitattributes
+#   p.gitignore
+#   p.go
+#   p.gomod
+#   p.gowork
+#   p.javascript
+#   p.jq
+#   p.json5
+#   p.json
+#   p.lua
+#   p.make
+#   p.markdown
+#   p.markdown_inline
+#   p.nix
+#   p.python
+#   p.rust
+#   p.toml
+#   p.typescript
+#   p.tsx
+#   p.html
+#   p.graphql
+#   p.vim
+#   p.yaml
+# ]);
+# treesitter-parsers = pkgs.symlinkJoin {
+#   name = "treesitter-parsers";
+#   paths = treesitterWithGrammars.dependencies;
+# };
+
