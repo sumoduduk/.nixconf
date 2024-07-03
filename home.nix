@@ -49,6 +49,7 @@ in {
     noto-fonts
     atac
     termscp
+    openssl
 
     #    pkgs.symbola
     #    pkgs.steam-run
