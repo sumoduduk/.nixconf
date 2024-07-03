@@ -49,6 +49,7 @@ in {
     noto-fonts
     atac
     termscp
+    pkg-config
     openssl
 
     #    pkgs.symbola
