@@ -19,7 +19,7 @@
     };
     oh-my-zsh = {
       enable = true;
-      theme = "dpoggi";
+      theme = "tjkirch";
     };
   };
 }
