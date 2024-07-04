@@ -51,6 +51,8 @@ in {
     termscp
     pkg-config
     openssl
+    geeqie
+    hyprshot
 
     #    pkgs.symbola
     #    pkgs.steam-run
