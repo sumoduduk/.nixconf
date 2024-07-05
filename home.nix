@@ -53,6 +53,8 @@ in {
     openssl
     geeqie
     hyprshot
+    rofi
+    bat
 
     #    pkgs.symbola
     #    pkgs.steam-run
@@ -107,6 +109,8 @@ in {
     SSH_ASKPASS = "";
     RUST_PROJECT = "${homeDir}/File/projects/rust_project";
     VAULT_OBSIDIAN = "${homeDir}/File/notes/obsidian_vault";
+    ZVM_VI_INSERT_ESCAPE_BINDKEY = "jk";
+    TIMER_FORMAT = "[%d]";
   };
 
   programs = {
