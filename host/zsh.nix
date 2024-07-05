@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   programs.zsh = {
     enable = true;
     shellAliases = {
@@ -19,7 +19,19 @@
     };
     oh-my-zsh = {
       enable = true;
-      theme = "tjkirch";
+      theme = "gianu";
+      plugins = [
+        "git"
+        "rust"
+        "timer"
+      ];
     };
+    plugins = [
+      {
+        name = "vi-mode";
+        src = pkgs.zsh-vi-mode;
+        file = "share/zsh-vi-mode/zsh-vi-mode/zsh-vi-mode.plugins.zsh";
+      }
+    ];
   };
 }
