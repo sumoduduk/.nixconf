@@ -14,7 +14,7 @@
       flakeupdate = "nixconf && sudo nix flake update";
       flakerebuild = "sudo nixos-rebuild switch --flake .";
       homerebuild = "home-manager switch --flake .  --show-trace";
-      vimconf = "cd $HOME/File/nvim";
+      vimconf = "cd $HOME/.nixconf/host/neovim/nvim";
       syncobsidian = "$RUST_PROJECT/tools-rust/obsidian_github_sync/result/bin/obsidian-github-sync $VAULT_OBSIDIAN";
     };
     oh-my-zsh = {
