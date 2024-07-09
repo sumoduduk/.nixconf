@@ -54,6 +54,7 @@ in {
     geeqie
     hyprshot
     rofi
+    bun
     bat
 
     #    pkgs.symbola
