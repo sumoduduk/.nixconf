@@ -56,6 +56,7 @@ in {
     rofi
     bun
     bat
+    wlogout
 
     #    pkgs.symbola
     #    pkgs.steam-run
