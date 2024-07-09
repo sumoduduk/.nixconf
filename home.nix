@@ -113,6 +113,7 @@ in {
     VAULT_OBSIDIAN = "${homeDir}/File/notes/obsidian_vault";
     ZVM_VI_INSERT_ESCAPE_BINDKEY = "jk";
     TIMER_FORMAT = "[%d]";
+    RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
   };
 
   programs = {
