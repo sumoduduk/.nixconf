@@ -43,6 +43,7 @@
           background = "#212528";
         };
       };
+      env.term = "xterm-256color";
     };
   };
 }
