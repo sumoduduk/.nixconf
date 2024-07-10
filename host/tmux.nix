@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.tmux = {
     enable = true;
-    terminal = "screen-256color";
+    terminal = "$TERM";
 
     # Rather than constraining window size to the maximum size of any client
     # connected to the *session*, constrain window size to the maximum size of any
@@ -25,7 +25,7 @@
     ];
 
     extraConfig = ''
-      set-option -ga terminal-overrides ",xterm-256color:Tc"
+      set -ag terminal-overrides ",$TERM:Tc"
       unbind %
       bind | split-window -h
 
