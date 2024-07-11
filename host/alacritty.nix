@@ -8,9 +8,8 @@
         style = "Regular";
       };
       window = {
-        opacity = 0.93;
+        opacity = 0.78;
         dynamic_padding = true;
-        blur = true;
         padding = {
           x = 1;
           y = 2;
@@ -43,7 +42,7 @@
           background = "#212528";
         };
       };
-      env.term = "xterm-256color";
+      # env.term = "xterm-256color";
     };
   };
 }

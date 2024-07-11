@@ -57,6 +57,8 @@ in {
     bun
     bat
     wlogout
+    alsa-tools
+    alsa-lib
 
     #    pkgs.symbola
     #    pkgs.steam-run
@@ -122,6 +124,10 @@ in {
     };
     lazygit = {
       enable = true;
+    };
+    nix-index = {
+      enable = true;
+      enableZshIntegration = true;
     };
   };
 
