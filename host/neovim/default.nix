@@ -37,6 +37,20 @@
     recursive = true;
   };
 
+  # linking mason
+
+  home.file."./.local/share/nvim/mason/bin/black" = {
+    source = pkgs.black;
+  };
+
+  home.file."./.local/share/nvim/mason/bin/isort" = {
+    source = pkgs.isort;
+  };
+
+  home.file."./.local/share/nvim/mason/bin/stylua" = {
+    source = pkgs.stylua;
+  };
+
   # home.file."./.config/nvim/lua/calista/core/init.lua" = {
   #   text =
   #     (builtins.readFile "${nvim-config}/lua/calista/core/init.lua")
