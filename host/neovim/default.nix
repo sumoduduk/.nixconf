@@ -41,7 +41,12 @@
   #   text =
   #     (builtins.readFile "${nvim-config}/lua/calista/core/init.lua")
   #     + ''
-  #       vim.opt.runtimepath:append("${treesitter-parsers}")
+  #       vim.api.nvim_create_autocmd({ "VimLeave" }, {
+  #         callback = function()
+  #           vim.cmd('!notify-send  "hello"')
+  #           vim.cmd('sleep 10m')
+  #         end,
+  #       })
   #     '';
   # };
 

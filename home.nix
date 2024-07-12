@@ -59,6 +59,7 @@ in {
     wlogout
     alsa-tools
     alsa-lib
+    python312Packages.pip
 
     #    pkgs.symbola
     #    pkgs.steam-run
