@@ -59,6 +59,7 @@ in {
     wlogout
     alsa-tools
     alsa-lib
+    sayonara
     python312Packages.pip
 
     #    pkgs.symbola
