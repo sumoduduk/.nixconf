@@ -6,9 +6,9 @@
       cls = "clear";
       project = "cd $HOME/File/projects";
       rustproject = "cd $RUST_PROJECT";
-      pythproject = "cd $HOME/File/projects/python_project";
+      pyproject = "cd $HOME/File/projects/python_project";
       webproject = "cd $HOME/File/projects/js_project";
-      vaultobsidian = "cd $VAULT_OBSIDIAN";
+      vaulobsidian = "cd $VAULT_OBSIDIAN";
       nixconf = "cd $HOME/.nixconf";
       getgit = "nvim $HOME/File/projects/game";
       flakeupdate = "nixconf && sudo nix flake update";
