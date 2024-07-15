@@ -8,7 +8,8 @@
         style = "Regular";
       };
       window = {
-        opacity = 0.78;
+        blur = true;
+        opacity = 0.93;
         dynamic_padding = true;
         padding = {
           x = 1;
