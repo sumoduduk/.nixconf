@@ -33,6 +33,7 @@
             "nvim (.*)" = "<span color=\"#57A143\"></span>  $1";
             "vim (.*)" = "<span color=\"#57A143\"></span>  $1";
             "nvim" = "<span color=\"#57A143\">  Neovim</span> ";
+            "tmux" = "<span color=\"#57A143\">  tmux</span> ";
             "ranger(.*)" = "<span color=\"#ffffff\"></span>  $1";
             "alacritty (.*)" = "<span color=\"#ffffff\"></span>  $1";
             "Search(.*)" = "<span color=\"#a855f7\"></span>  Search$1";
