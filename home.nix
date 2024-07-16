@@ -60,6 +60,7 @@ in {
     alsa-tools
     alsa-lib
     sayonara
+    ffmpeg
     python312Packages.pip
 
     #    pkgs.symbola
