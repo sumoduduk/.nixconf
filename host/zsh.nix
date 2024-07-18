@@ -16,6 +16,7 @@
       homerebuild = "home-manager switch --flake .  --show-trace";
       vimconf = "cd $HOME/.nixconf/host/neovim/nvim";
       syncobsidian = "$RUST_PROJECT/tools-rust/obsidian_github_sync/result/bin/obsidian-github-sync $VAULT_OBSIDIAN";
+      fdock = "cd $HOME/.local/share/docker/overlay2/f4f980313214998cf1cfe89a2356a832ba3cf6427dd786ba4baedd6a3fb04e05/diff";
     };
     oh-my-zsh = {
       enable = true;
