@@ -52,7 +52,7 @@
   users.users.calista = {
     isNormalUser = true;
     description = "calista";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "docker"];
     packages = with pkgs; [
       git
       fd
@@ -114,6 +114,14 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
