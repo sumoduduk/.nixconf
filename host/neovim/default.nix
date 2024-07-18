@@ -14,6 +14,7 @@
     pylint
     pyright
     stylua
+    swift-format
   ];
 
   programs.neovim = {
@@ -49,6 +50,10 @@
 
   home.file."./.local/share/nvim/mason/bin/stylua" = {
     source = pkgs.stylua;
+  };
+
+  home.file."./.local/share/nvim/mason/bin/swift-format" = {
+    source = pkgs.swift-format;
   };
 
   # home.file."./.config/nvim/lua/calista/core/init.lua" = {
