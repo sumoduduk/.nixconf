@@ -415,10 +415,11 @@
     "nvim-config": {
       "flake": false,
       "locked": {
-        "dirtyRev": "e6e1d53eef482c8d35081d5e770c5b9dc895cda8-dirty",
-        "dirtyShortRev": "e6e1d53-dirty",
-        "lastModified": 1721310725,
-        "narHash": "sha256-X6vPUL1iB9nSXMWOXcWwmzKNKKO0rn4CZdr58ACerdk=",
+        "lastModified": 1721372619,
+        "narHash": "sha256-SVZt0wnqUlkE1DmZjF2uFw69uYDsrS3zo2dvdIWEhiA=",
+        "ref": "refs/heads/arch",
+        "rev": "27c9af2f1b4f69b350ce29ad63499d6f9d9d1caa",
+        "revCount": 60,
         "type": "git",
         "url": "file:./host/neovim/nvim"
       },
