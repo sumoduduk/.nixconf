@@ -52,6 +52,7 @@ in {
     pkg-config
     openssl
     geeqie
+    hyprcursor
     hyprshot
     rofi
     bun
