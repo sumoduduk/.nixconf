@@ -51,6 +51,7 @@ in {
     pyright
     stylua
     swift-format
+    typescript
   ];
 
   programs.neovim = {
@@ -75,6 +76,10 @@ in {
   };
 
   # linking mason
+
+  home.file."./.local/share/nvim/mason/bin/typescript-language-server" = {
+    source = pkgs.nodePackages.typescript-language-server;
+  };
 
   home.file."./.local/share/nvim/mason/bin/black" = {
     source = pkgs.black;
