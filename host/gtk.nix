@@ -2,13 +2,15 @@
   pkgs,
   config,
   ...
-}: let
-  cursor = {
-    name = "Numix-Cursor-Light";
-    package = pkgs.numix-cursor-theme;
-  };
-in {
-  home.pointerCursor = cursor;
+}:
+# let
+# cursor = {
+#   name = "Numix-Cursor-Light";
+#   package = pkgs.numix-cursor-theme;
+# };
+# in
+{
+  # home.pointerCursor = cursor;
 
   gtk = {
     enable = true;
@@ -20,12 +22,12 @@ in {
       package = pkgs.matcha-gtk-theme;
     };
 
-    iconTheme = {
-      name = "Symbola";
-      package = pkgs.symbola;
-    };
+    # iconTheme = {
+    #   name = "Symbola";
+    #   package = pkgs.symbola;
+    # };
 
-    cursorTheme = cursor;
+    # cursorTheme = cursor;
 
     # gtk3.bookmarks = [
     #   "file://${config.xdg.userDirs.download}"
