@@ -66,8 +66,10 @@ in {
     wlogout
     alsa-tools
     alsa-lib
+    alsa-utils
     sayonara
     ffmpeg
+    audio-recorder
     python312Packages.pip
 
     #    pkgs.symbola
