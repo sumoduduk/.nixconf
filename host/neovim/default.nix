@@ -52,6 +52,7 @@ in {
     stylua
     swift-format
     typescript
+    nil
   ];
 
   programs.neovim = {
