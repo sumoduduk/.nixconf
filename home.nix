@@ -40,6 +40,7 @@ in {
     nodejs_22
     python3
     zig
+    go
     gcc
     fzf
     gnumake
@@ -70,6 +71,7 @@ in {
     sayonara
     ffmpeg
     audio-recorder
+    appimage-run
     python312Packages.pip
 
     #    pkgs.symbola
