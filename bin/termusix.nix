@@ -1,12 +1,16 @@
-{ stdenv, lib, fetchurl, runTimePackage  }:
-
+{
+  stdenv,
+  lib,
+  fetchurl,
+  runTimePackage,
+}:
 stdenv.mkDerivation rec {
   pname = "termusix";
   version = "0.1.1";
 
   src = fetchurl {
-    url = "https://github.com/sumoduduk/termusix/releases/download/${version}/termusix-x86_64-linux";
-    sha256 = "0000000000000000000000000000000000000000000000000000";
+    url = "https://github.com/sumoduduk/termusix/releases/download/v${version}/termusix-x86_64-linux";
+    sha256 = "sha256-hAhDpzjv7MXhfevgKAGmnt8Wp37mFMBNyGboTyLEJgw=";
   };
 
   dontBuild = true;
@@ -16,7 +20,7 @@ stdenv.mkDerivation rec {
     cp ${pname} $out/bin/
   '';
 
-  propagatedBuildInputs = [ runTimePackage ]
+  propagatedBuildInputs = [runTimePackage];
 
   meta = with lib; {
     description = "A terminal-based music player with a user-friendly terminal UI, built with Rust.";
