@@ -7,8 +7,8 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     nvim-config = {
-	url = "git+file:./host/neovim/nvim";
-	flake = false;
+      url = "git+file:./host/neovim/nvim";
+      flake = false;
     };
     neovim-nightly-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
@@ -41,7 +41,7 @@
             allowUnfree = true;
           };
         };
-	extraSpecialArgs = {inherit nvim-config;};
+        extraSpecialArgs = {inherit nvim-config;};
         modules = [
           ./home.nix
           {
