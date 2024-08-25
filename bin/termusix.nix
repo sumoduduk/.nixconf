@@ -2,7 +2,9 @@
   stdenv,
   lib,
   fetchurl,
-  runTimePackage,
+  alsa-lib,
+  libgcc,
+  autoPatchelfHook,
 }:
 stdenv.mkDerivation rec {
   pname = "termusix";
@@ -15,12 +17,18 @@ stdenv.mkDerivation rec {
 
   dontBuild = true;
 
+  nativeBuildInputs = [autoPatchelfHook];
+  buildInputs = [alsa-lib libgcc];
+
+  unpackPhase = ''
+    cp $src $pname
+  '';
+
   installPhase = ''
     mkdir -p $out/bin
     cp ${pname} $out/bin/
+    chmod +x $out/bin/${pname}
   '';
-
-  propagatedBuildInputs = [runTimePackage];
 
   meta = with lib; {
     description = "A terminal-based music player with a user-friendly terminal UI, built with Rust.";
