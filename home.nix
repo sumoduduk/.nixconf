@@ -58,6 +58,7 @@ in {
     termscp
     pkg-config
     openssl
+    dbus
     geeqie
     hyprcursor
     hyprshot
@@ -73,6 +74,7 @@ in {
     audio-recorder
     appimage-run
     python312Packages.pip
+    swift
 
     #    pkgs.symbola
     #    pkgs.steam-run
