@@ -9,5 +9,6 @@
     ./rust.nix
     ./alacritty.nix
     ./zsh.nix
+    ./hyprland.nix
   ];
 }
