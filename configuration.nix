@@ -10,6 +10,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./config
   ];
 
   # Bootloader.
@@ -40,14 +41,6 @@
     xkb.variant = "";
   };
 
-  services.displayManager = {
-    sddm = {
-      enable = true;
-      wayland.enable = true;
-      theme = "where_is_my_sddm_theme";
-    };
-  };
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.calista = {
     isNormalUser = true;
@@ -57,7 +50,6 @@
       git
       fd
       firefox
-      kitty
       cachix
     ];
   };
@@ -72,7 +64,6 @@
     wget
     pavucontrol
     playerctl
-
     pulseaudio
   ];
 
@@ -98,6 +89,8 @@
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
+  programs.dconf.enable = true;
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -109,22 +102,14 @@
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
     substituters = [
-      "https://hyprland.cachix.org"
       "https://cache.nixos.org/"
       "https://nix-community.cachix.org"
     ];
     trusted-public-keys = [
-      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
     ];
     trusted-users = ["root" "calista"];
-  };
-
-  programs.hyprland = {
-    enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    xwayland.enable = true;
   };
 
   # List services that you want to enable:

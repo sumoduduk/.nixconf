@@ -37,7 +37,7 @@ in {
     # # "Hello, world!" when run.
     #    pkgs.hello
     ripgrep
-    nodejs_22
+    # nodejs_22
     python3
     zig
     go
@@ -73,8 +73,7 @@ in {
     ffmpeg
     audio-recorder
     appimage-run
-    python312Packages.pip
-    swift
+    # swift
 
     #    pkgs.symbola
     #    pkgs.steam-run
@@ -133,6 +132,7 @@ in {
     ZVM_VI_INSERT_ESCAPE_BINDKEY = "jk";
     TIMER_FORMAT = "[%d]";
     RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
+    NIXOS_OZONE_WL = "1";
   };
 
   programs = {
@@ -141,10 +141,6 @@ in {
     };
     lazygit = {
       enable = true;
-    };
-    nix-index = {
-      enable = true;
-      enableZshIntegration = true;
     };
   };
 
