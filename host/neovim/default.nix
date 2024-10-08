@@ -57,7 +57,6 @@ in {
 
   programs.neovim = {
     enable = true;
-    package = pkgs.neovim;
     defaultEditor = true;
     coc.enable = false;
     withNodeJs = true;
