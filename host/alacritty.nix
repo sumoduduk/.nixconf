@@ -9,7 +9,7 @@
       };
       window = {
         blur = true;
-        opacity = 0.93;
+        opacity = 0.98;
         dynamic_padding = true;
         padding = {
           x = 1;
