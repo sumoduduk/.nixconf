@@ -241,7 +241,7 @@
         "dirtyRev": "b10da6c125243a193e1de53f04186c3c3d20b6d4-dirty",
         "dirtyShortRev": "b10da6c-dirty",
         "lastModified": 1728378658,
-        "narHash": "sha256-DDL0GFL6BF7194tFsbeX4hBTAzsion6Qkvlm5XRHCyo=",
+        "narHash": "sha256-tK1LHWZz4qsM/kBPoEL+zU9GkVYSnCYO/UcNRK13FKc=",
         "type": "git",
         "url": "file:./host/neovim/nvim"
       },
