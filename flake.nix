@@ -9,9 +9,9 @@
       url = "git+file:./host/neovim/nvim";
       flake = false;
     };
-    neovim-nightly-overlay = {
-      url = "github:nix-community/neovim-nightly-overlay";
-    };
+    # neovim-nightly-overlay = {
+    #   url = "github:nix-community/neovim-nightly-overlay";
+    # };
   };
 
   outputs = {
@@ -21,7 +21,7 @@
     nvim-config,
     ...
   } @ inputs: let
-    overlays = [inputs.neovim-nightly-overlay.overlays.default];
+    # overlays = [inputs.neovim-nightly-overlay.overlays.default];
     lib = nixpkgs.lib;
     system = "x86_64-linux";
   in {
@@ -43,9 +43,9 @@
         extraSpecialArgs = {inherit nvim-config;};
         modules = [
           ./home.nix
-          {
-            nixpkgs.overlays = overlays;
-          }
+          # {
+          #   nixpkgs.overlays = overlays;
+          # }
         ];
       };
     };
