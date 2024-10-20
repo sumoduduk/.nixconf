@@ -5,10 +5,11 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    # nvim-config = {
-    #   url = "git+file:./host/neovim/nvim";
-    #   flake = false;
-    # };
+    nvim-config = {
+      # url = "git+file:./host/neovim/nvim";
+      url = "github:sumoduduk/nvim/nix";
+      flake = false;
+    };
     # neovim-nightly-overlay = {
     #   url = "github:nix-community/neovim-nightly-overlay";
     # };
@@ -18,7 +19,7 @@
     self,
     nixpkgs,
     home-manager,
-    # nvim-config,
+    nvim-config,
     ...
   } @ inputs: let
     # overlays = [inputs.neovim-nightly-overlay.overlays.default];
@@ -40,7 +41,7 @@
             allowUnfree = true;
           };
         };
-        # extraSpecialArgs = {inherit nvim-config;};
+        extraSpecialArgs = {inherit nvim-config;};
         modules = [
           ./home.nix
           # {
