@@ -65,6 +65,7 @@
     pavucontrol
     playerctl
     pulseaudio
+    distrobox
   ];
 
   hardware.pulseaudio.enable = false;
