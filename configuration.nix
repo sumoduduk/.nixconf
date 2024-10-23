@@ -46,6 +46,7 @@
     isNormalUser = true;
     description = "calista";
     extraGroups = ["networkmanager" "wheel" "docker"];
+
     packages = with pkgs; [
       git
       fd
