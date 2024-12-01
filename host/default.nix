@@ -1,6 +1,7 @@
 {
   imports = [
     ./waybar
+    ./thunar.nix
     ./neovim
     ./dunst.nix
     ./git.nix
