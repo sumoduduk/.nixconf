@@ -73,7 +73,9 @@ in {
     xfce.thunar
     audio-recorder
     appimage-run
+    ffmpegthumbnailer
     telegram-desktop
+    webp-pixbuf-loader
     # swift
     #    pkgs.symbola
     #    pkgs.steam-run
@@ -144,9 +146,6 @@ in {
   };
 
   services = {
-    tumbler = {
-      enable = true;
-    };
     hyprpaper = {
       enable = true;
       settings = {
