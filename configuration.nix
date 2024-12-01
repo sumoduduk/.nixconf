@@ -29,6 +29,7 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
+  # time.timeZone = "America/Vancouver";
   time.timeZone = "Asia/Jakarta";
 
   # Select internationalisation properties.

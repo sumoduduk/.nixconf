@@ -48,14 +48,13 @@ in {
     unzip
     btop
     bat
-    termscp
     alejandra
     wl-clipboard
     luajitPackages.luarocks
     papirus-icon-theme
     noto-fonts
     atac
-    termscp
+    # termscp
     pkg-config
     openssl
     dbus
@@ -73,6 +72,7 @@ in {
     ffmpeg
     audio-recorder
     appimage-run
+    telegram-desktop
     # swift
 
     #    pkgs.symbola

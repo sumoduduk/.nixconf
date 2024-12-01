@@ -2,14 +2,14 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      font.size = 12;
+      font.size = 10;
       font.normal = {
         family = "FiraCodeNerdFontPropo";
         style = "Regular";
       };
       window = {
         blur = true;
-        opacity = 0.98;
+        opacity = 0.99;
         dynamic_padding = true;
         padding = {
           x = 1;

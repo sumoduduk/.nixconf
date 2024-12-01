@@ -1,6 +1,6 @@
 {
   imports = [
     ./greetd.nix
-    ./wireguard.nix
+    # ./wireguard.nix
   ];
 }
