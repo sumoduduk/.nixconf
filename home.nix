@@ -144,6 +144,9 @@ in {
   };
 
   services = {
+    tumbler = {
+      enable = true;
+    };
     hyprpaper = {
       enable = true;
       settings = {
